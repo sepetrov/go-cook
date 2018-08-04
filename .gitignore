@@ -1,3 +1,4 @@
 chaindata
 dappchain/src/types/types.pb.go
 webclient/node_modules/
+app.db
