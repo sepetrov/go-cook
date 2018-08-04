@@ -43,6 +43,6 @@ RUN chmod +x /usr/local/bin/loom
 
 WORKDIR /opt/go-cook
 
-EXPOSE 9999 46656 46657 46658
+EXPOSE 9999 9000 46656 46657 46658
 
 ENTRYPOINT ["tail", "-f", "/dev/null"]
