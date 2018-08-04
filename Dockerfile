@@ -33,16 +33,15 @@ RUN npm install -g truffle
 ## Loom - leave this at the end, it's the most likely to change,
 ## and we don't want to constantly reinstall / rebuild everything
 
-WORKDIR /opt/go-cook
-
 # Loom Latest
 #ENV LOOM_VERSION 327
 
 # Loom Stable
 ENV LOOM_VERSION 288
+ADD https://private.delegatecall.com/loom/linux/build-${LOOM_VERSION}/loom /usr/local/bin/loom
+RUN chmod +x /usr/local/bin/loom
 
-RUN curl -OL https://private.delegatecall.com/loom/linux/build-${LOOM_VERSION}/loom && \
-	chmod +x loom
+WORKDIR /opt/go-cook
 
 EXPOSE 9999 46656 46657 46658
 
