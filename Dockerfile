@@ -1,3 +1,4 @@
+# Based on https://github.com/NeonDistrict/loom-ubuntu-docker
 FROM ubuntu:16.04
 
 RUN apt-get update -y && \
@@ -32,7 +33,7 @@ RUN npm install -g truffle
 ## Loom - leave this at the end, it's the most likely to change,
 ## and we don't want to constantly reinstall / rebuild everything
 
-WORKDIR /home
+WORKDIR /opt/go-cook
 
 # Loom Latest
 #ENV LOOM_VERSION 327
