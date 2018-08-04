@@ -1,0 +1,12 @@
+version: "3"
+services:
+  web:
+    image: loom
+    container_name: loom
+    ports:
+    - "9999:9999"
+    - "46656:46656"
+    - "46657:46657"
+    - "46658:46658"
+    volumes:
+    - .:/opt/go-cook
