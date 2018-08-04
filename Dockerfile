@@ -7,7 +7,7 @@ RUN apt-get update -y && \
 # Download Go packages
 RUN curl -O https://dl.google.com/go/go1.10.2.linux-amd64.tar.gz && \
 	tar -C /usr/local -xzf go1.10.2.linux-amd64.tar.gz
-RUN echo -e "\nexport PATH=\$PATH:/usr/local/go/bin:/gopath/bin" >> ~/.bashrc && \
+RUN echo -n "\nexport PATH=\$PATH:/usr/local/go/bin:/gopath/bin" >> ~/.bashrc && \
 	/bin/bash -c "source ~/.bashrc"
 ENV PATH ${PATH}:/usr/local/go/bin:/gopath/bin
 
